@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trial/booking.dart';
 
 class RoomPage extends StatefulWidget {
   const RoomPage({super.key});
@@ -156,7 +157,17 @@ class _RoomPageState extends State<RoomPage> {
                   ),
                 ),
               ),
-            ]))
+            ])),
+        Container(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+            child: Text('Book Now!'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => BookingPage()));
+            },
+          ),
+        ),
       ]),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       floatingActionButton: Container(
